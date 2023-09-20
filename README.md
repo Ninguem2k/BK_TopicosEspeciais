@@ -1,71 +1,147 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<center>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<h1>Requisitos do Usuário</h1>
 
-## About Laravel
+Requisitos:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- PHP v8+
+- MySQL v5+
+- Composer v2+
+- Linux/Windows
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+</center>
+<center>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<h3>HTTP - Códigos</h3>
 
-## Learning Laravel
+Respostas de informação (100-199),
+Respostas de sucesso (200-299),
+Redirecionamentos (300-399)
+Erros do cliente (400-499)
+Erros do servidor (500-599).
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<h1>Configuração do Projeto</h1>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+> Para começar com o projeto Laravel, siga estas etapas:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Clonar o Projeto
 
-## Laravel Sponsors
+1. Abra o terminal ou prompt de comando.
+2. Navegue até o diretório onde deseja clonar o repositório do Laravel:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+        cd caminho/do/diretorio
 
-### Premium Partners
+Execute o seguinte comando para clonar o repositório:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+        git clone URL_DO_REPOSITORIO
 
-## Contributing
+## Configurar o Ambiente
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Navegue até o diretório do projeto Laravel que você acabou de clonar:
+        
+        cd nome-do-repositorio
 
-## Code of Conduct
+2. Execute o comando 'composer install'. Isso instalará todas as dependências do projeto listadas no arquivo composer.json:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+        composer install
 
-## Security Vulnerabilities
+3. Crie um arquivo .env na raiz do projeto. Você pode copiar o arquivo .env.example que já existe e renomeá-lo para .env:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+        copy .env.example .env
 
-## License
+4. Configure as informações do banco de dados no arquivo .env. Certifique-se de fornecer os detalhes corretos para o seu ambiente:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-"# BK_TopicosEspeciais" 
-# BK_TopicosEspeciais
-# BK_TopicosEspeciais
-# BK_TopicosEspeciais
-# bk_topicosEspeciais
+        DB_CONNECTION=mysql
+        DB_HOST=mysql
+        DB_PORT=3306
+        DB_DATABASE=NOME_DO_BANCO
+        DB_USERNAME=Usuario
+        DB_PASSWORD=senha_segura # Observe que uma senha segura deve ser usada em ambiente de produção
+
+## Migrações do Banco de Dados
+
+1. Execute as migrações do banco de dados executando o comando php artisan migrate. Isso criará as tabelas necessárias no banco de dados:
+
+        php artisan migrate
+
+## Iniciar o Servidor de Desenvolvimento
+Inicie o servidor de desenvolvimento do Laravel executando o comando php artisan serve. Isso iniciará o servidor em http://localhost:8000 por padrão:
+
+php artisan serve
+
+  Agora você pode acessar o projeto Laravel em seu navegador, em http://localhost:8000. A partir daqui, você pode começar a trabalhar no projeto e fazer alterações como desejar.
+
+## Documentação
+
+## Projeto da API do Marketplace de Serviços
+
+Este projeto tem como objetivo desenvolver uma API para um marketplace de serviços usando o framework Laravel, o banco de dados MySQL e a ferramenta Postman para testes.
+
+### Descrição do Projeto
+
+O objetivo deste projeto é criar uma API robusta e escalável para um marketplace de serviços, permitindo que os usuários se cadastrem, publiquem serviços, solicitem serviços. A API deve ser segura, eficiente e bem documentada.
+
+### Tarefas do Projeto
+
+2. **Design e Modelagem do Banco de Dados**
+
+   - Descrição: Projetar o esquema do banco de dados para armazenar informações de usuários, serviços, pedidos e transações.
+   - Responsável: Cássio Gabriel/Gabriel Marques
+   - Prazo: [16/09/2023]
+
+3. **Implementação da Autenticação**
+
+   - Descrição: Implementar a autenticação de usuários usando tokens JWT para permitir o acesso seguro à API.
+   - Responsável: Cássio Gabriel/Wilson Prates 
+   - Prazo: [24/09/2023]
+
+4. **Criação dos Endpoints da API**
+
+   - Descrição: Desenvolver os endpoints da API para cadastro de usuários, publicação de serviços, solicitação de serviços, etc.
+   - Responsável: Cássio Gabriel/Wilson Prates 
+   - Prazo: [28/09/2023]
+
+
+6. **Testes e Depuração**
+
+   - Descrição: Realizar testes rigorosos em todos os endpoints da API usando o Postman e depurar quaisquer problemas identificados.
+   - Responsável: Cássio Gabriel/Wilson Prates 
+   - Prazo: [30/09/2023]
+
+7. **Documentação da API**
+
+   - Descrição: Criar documentação detalhada da API, incluindo informações sobre endpoints, parâmetros, respostas e exemplos de uso.
+   - Responsável: Cássio Gabriel/Wilson Prates 
+   - Prazo: [30/09/2023]
+
+8. **Implantação em Ambiente de Produção**
+
+   - Descrição: Implantação da API em um ambiente de produção, garantindo alta disponibilidade e segurança.
+   - Responsável: Cássio Gabriel/Wilson Prates 
+   - Prazo: [02/09/2023]
+ 
+### Recursos
+
+- Laravel
+- MySQL
+- Postman
+
+### Entregáveis
+
+- Código fonte do projeto no repositório Git
+- Documentação da API
+- Ambiente de produção da API em execução
+
+### Cronograma
+
+| Tarefa                               | Início       | Término      |
+| ------------------------------------ | ------------ | ------------ |
+| Design e Modelagem do Banco de Dados | [16/09/2023] | [16/09/2023] |
+| Implementação da Autenticação        | [20/09/2023] | [24/09/2023] |
+| Criação dos Endpoints da API         | [24/09/2023] | [28/09/2023] |
+| Testes e Depuração                   | [28/09/2023] | [30/09/2023] |
+| Documentação da API                  | [28/09/2023] | [30/09/2023] |
+| Implantação em Ambiente de Produção  | [30/09/2023] | [02/09/2023] |
+
+
+</center>

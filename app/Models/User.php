@@ -7,10 +7,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Str;
 
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+
+    protected $primaryKey = 'id';
+    public $incrementing = false;
+    protected $keyType = 'string';
+
 
     /**
      * The attributes that are mass assignable.
@@ -21,6 +28,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'phone',
+        'cep',
+        'avatar',
+        'avatar_url',
     ];
 
     /**
@@ -42,4 +53,18 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function services(): HasMany
+    {
+        return $this->hasMany(Service::class, 'user_id', 'id');
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            $model->{$model->getKeyName()} = Str::uuid()->toString();
+        });
+    }
 }
