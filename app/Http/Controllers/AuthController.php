@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Repositories\UserRepository; 
-use App\Repositories\UserTokenRepository; 
-use App\Services\AuthenticationServices; 
+use App\Repositories\UserRepository;
+use App\Repositories\UserTokenRepository;
+use App\Services\AuthenticationServices;
 use App\Providers\DateProvider;
-use App\Providers\EmailProvider; 
-use Config; 
+use App\Providers\EmailProvider;
+use Config;
 
 class AuthController extends Controller
 {
