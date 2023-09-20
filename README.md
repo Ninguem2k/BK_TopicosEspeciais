@@ -31,7 +31,7 @@ Erros do servidor (500-599).
 
         cd caminho/do/diretorio
 
-Execute o seguinte comando para clonar o repositório:
+3. Execute o seguinte comando para clonar o repositório:
 
         git clone URL_DO_REPOSITORIO
 
@@ -67,7 +67,7 @@ Execute o seguinte comando para clonar o repositório:
 ## Iniciar o Servidor de Desenvolvimento
 Inicie o servidor de desenvolvimento do Laravel executando o comando php artisan serve. Isso iniciará o servidor em http://localhost:8000 por padrão:
 
-php artisan serve
+        php artisan serve
 
   Agora você pode acessar o projeto Laravel em seu navegador, em http://localhost:8000. A partir daqui, você pode começar a trabalhar no projeto e fazer alterações como desejar.
 
